@@ -15,7 +15,7 @@ export async function createArticle (newArticle) {
 
 export async function updateArticle (id, updatedArticle) {
   return Article.findOneAndUpdate(
-    { _id: mongoose.Types.ObjectId(id) },
+    { _id: id },
     updatedArticle,
     {
       new: true
